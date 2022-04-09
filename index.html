@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGSLTM3MB9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag () { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TGSLTM3MB9');
+  </script>
+  <meta charset="utf-8">
+  <title>Imgurandom</title>
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Custom stylesheet -->
+  <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 mx-auto mt-3">
+        <h1 class="text-center">Imgurandom</h1>
+        <textarea id="output" class="form-control my-3" title="Result"></textarea>
+        <div class="input-group my-3">
+          <div class="custom-control custom-checkbox mx-auto">
+            <input checked class="custom-control-input formats" type="checkbox" value="jpg" id="jpg-check">
+            <label class="custom-control-label" for="jpg-check">
+              JPG
+            </label>
+          </div>
+          <div class="custom-control custom-checkbox mx-auto">
+            <input checked class="custom-control-input formats" type="checkbox" value="png" id="png-check">
+            <label class="custom-control-label" for="png-check">
+              PNG
+            </label>
+          </div>
+          <div class="custom-control custom-checkbox mx-auto">
+            <input checked class="custom-control-input formats" type="checkbox" value="webp" id="webp-check">
+            <label class="custom-control-label" for="webp-check">
+              WebP
+            </label>
+          </div>
+          <div class="custom-control custom-checkbox mx-auto">
+            <input checked class="custom-control-input formats" type="checkbox" value="gif" id="gif-check">
+            <label class="custom-control-label" for="gif-check">
+              GIF
+            </label>
+          </div>
+        </div>
+        <div class="input-group mx-auto">
+          <div class="input-group-prepend">
+            <button id="generate-button" class="btn btn-primary" type="button" aria-label="Generate">
+              Generate
+            </button>
+          </div>
+          <input type="number" min="1" id="quantity" class="form-control" value="5" placeholder="Number of images"
+            aria-label="Number of images" />
+          <div class="input-group-append">
+            <span class="input-group-text">imgur images</span>
+          </div>
+        </div>
+        <div class="progress my-3">
+          <div id="progress-bar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="text-center">
+          &copy; 2014 - 2018 kit
+          <span class="mx-2">-</span>
+          <a href="https://github.com/kitce/imgurandom" target="_blank">Source code</a>
+          <span class="mx-2">-</span>
+          <a href="https://github.com/kitce/imgurandom/blob/master/LICENSE" target="_blank">MIT License</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="temp"></div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
